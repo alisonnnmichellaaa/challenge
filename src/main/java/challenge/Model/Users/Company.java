@@ -1,12 +1,12 @@
-package challenge.Dtos;
+package challenge.Model.Users;
 
 
-public class CompanyDto {
+public class Company {
     private String name;
     private String catchPhrase;
     private String bs;
 
-    public CompanyDto() {
+    public Company() {
     }
 
     public String getName() {

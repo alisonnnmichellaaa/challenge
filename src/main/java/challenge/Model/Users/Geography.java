@@ -1,15 +1,15 @@
-package challenge.Dtos;
+package challenge.Model.Users;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class GeographyDto {
+public class Geography {
 
     @JsonProperty("lat")
     private String latitude;
     @JsonProperty("lng")
     private String longitude;
 
-    public GeographyDto() {
+    public Geography() {
     }
 
     public String getLatitude() {

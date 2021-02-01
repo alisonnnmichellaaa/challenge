@@ -1,22 +1,22 @@
-package challenge.Dtos;
+package challenge.Model.Users;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class UserDto {
+public class User {
 
     private Long id;
     private String name;
     private String username;
     private String email;
     @JsonProperty("address")
-    private AddressDto addressDto;
+    private Address address;
     private String phone;
     private String website;
     @JsonProperty("company")
-    private CompanyDto companyDto;
+    private Company company;
 
-    public UserDto() {
+    public User() {
     }
 
     public Long getId() {
@@ -51,12 +51,12 @@ public class UserDto {
         this.email = email;
     }
 
-    public AddressDto getAddressDto() {
-        return addressDto;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAddressDto(AddressDto addressDto) {
-        this.addressDto = addressDto;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getPhone() {
@@ -75,11 +75,11 @@ public class UserDto {
         this.website = website;
     }
 
-    public CompanyDto getCompanyDto() {
-        return companyDto;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setCompanyDto(CompanyDto companyDto) {
-        this.companyDto = companyDto;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }

@@ -1,17 +1,17 @@
-package challenge.Dtos;
+package challenge.Model.Users;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class AddressDto {
+public class Address {
     private String street;
     private String  suite;
     private String city;
     private String zipcode;
     @JsonProperty("geo")
-    private GeographyDto geographyDto;
+    private Geography geography;
 
-    public AddressDto() {
+    public Address() {
     }
 
     public String getStreet() {
@@ -46,11 +46,11 @@ public class AddressDto {
         this.zipcode = zipcode;
     }
 
-    public GeographyDto getGeographyDto() {
-        return geographyDto;
+    public Geography getGeography() {
+        return geography;
     }
 
-    public void setGeographyDto(GeographyDto geographyDto) {
-        this.geographyDto = geographyDto;
+    public void setGeography(Geography geography) {
+        this.geography = geography;
     }
 }
