@@ -30,7 +30,7 @@ public class UserControllerTest {
     private MockMvc mvc;
 
     @Autowired
-    ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
 
     @MockBean
     private JSONPlaceholderService jsonPlaceholderService;
