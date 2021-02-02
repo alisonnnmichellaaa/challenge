@@ -1,6 +1,7 @@
 package challenge.Controllers;
 
 import challenge.Services.Exceptions.JsonPlaceHolderServiceException;
+import challenge.Services.Exceptions.OnlyOneFilter;
 import challenge.Services.Exceptions.UserPermissionValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,9 @@ public class GlobalDefaultExceptionHandler {
     public ResponseEntity<String> handleJsonPlaceHolderServiceException(Exception ex){
         return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(ex.getMessage());
     }
-
+    @ExceptionHandler(value = OnlyOneFilter.class)
+    public ResponseEntity<String> handleOnlyOneFilter(Exception ex){
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(ex.getMessage());
+    }
 
 }
